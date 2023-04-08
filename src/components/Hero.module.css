@@ -1,0 +1,12 @@
+.hero {
+  margin: 12rem 15rem 20rem 15rem;
+}
+
+.hero:first-child {
+  font-size: 2rem;
+  color: white;
+}
+
+.name {
+  color: #c778dd;
+}

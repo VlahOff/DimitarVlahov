@@ -1,0 +1,34 @@
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 10rem;
+}
+
+.title {
+  font-size: 3rem
+}
+
+.tech-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+  margin: 0 8rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  font-size: 2rem;
+  background-color: #454d59;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.highlight {
+  color: #c778dd;
+}
