@@ -1,0 +1,9 @@
+.title {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.title .color {
+  color: #c778dd;
+}

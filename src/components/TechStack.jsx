@@ -2,7 +2,7 @@ import classes from './TechStack.module.css';
 
 const TechStack = () => {
   return (
-    <section className={classes['tech-stack']}>
+    <section className={classes['tech-stack']} id="techStack">
       <h2 className={classes.title}>
         <span className={classes.highlight}>Skills</span> and tools
       </h2>

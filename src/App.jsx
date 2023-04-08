@@ -1,4 +1,5 @@
 import './App.css';
+import ContactMe from './components/ContactMe';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <TechStack />
         <Projects />
+        <ContactMe />
       </main>
       <footer>
 
