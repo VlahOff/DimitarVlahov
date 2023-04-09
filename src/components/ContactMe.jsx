@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-
+import emailjs from '../../node_modules/emailjs-com';
 
 import classes from './ContactMe.module.css';
-import emailjs from '../../node_modules/emailjs-com';
 
 const emailReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const initialFormValues = {
@@ -77,7 +76,8 @@ const ContactMe = (props) => {
           props.toggleModal('Message sent successfully!');
           setValues(initialFormValues);
         }
-      }, (error) => {
+      })
+      .catch(() => {
         props.toggleModal('An error has ocurred!');
       });
   };

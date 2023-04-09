@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import './App.css';
+
 import ContactMe from './components/ContactMe';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import MessageModal from './components/MessageModal';
 import Projects from './components/Projects';
 import TechStack from './components/TechStack';
+
+import './App.css';
 
 function App() {
   const [isModalShown, setIsModalShown] = useState(false);
