@@ -12,6 +12,10 @@
   color: white;
 }
 
+.bolt {
+  color: #c778dd;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;

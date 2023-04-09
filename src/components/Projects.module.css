@@ -1,5 +1,6 @@
 .projects {
   scroll-margin-block-start: 80px;
+  margin-bottom: 180px;
 }
 
 .title {
@@ -24,7 +25,7 @@
   width: 100px;
   height: 400px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   background: #313131;
   box-shadow: 20px 20px 60px #0000002f,
     -20px -20px 60px #0000002f;
@@ -34,33 +35,40 @@
   width: 800px;
 }
 
+.info-card {
+  position: relative;
+  animation: show-description 300ms ease alternate;
+  z-index: -1;
+}
+
 .info-card p {
   margin-bottom: 1rem;
 }
 
-.btn-wrapper {
+.link-wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-top: 1.5rem;
   gap: 1rem;
   text-align: center;
 }
 
-.btn {
+.link {
+  text-decoration: none;
   color: white;
   padding: 0.5rem 1rem;
   cursor: pointer;
   background-color: #454d59;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   margin-right: 1rem;
 }
 
-.btn:first-child:hover {
+.link:first-child:hover {
   background-color: #c778dd;
 }
 
-.btn:last-child:hover {
+.link:last-child:hover {
   background-color: crimson;
 }
 
@@ -70,4 +78,16 @@
   margin: 0 30%;
   height: 500px;
   margin-bottom: 2rem;
+}
+
+@keyframes show-description {
+  from {
+    opacity: 0;
+    top: 200px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0;
+  }
 }
