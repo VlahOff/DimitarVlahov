@@ -12,6 +12,10 @@
   color: white
 }
 
+.highlight {
+  color: #c778dd;
+}
+
 .tech-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -31,6 +35,20 @@
   border-radius: 0.5rem;
 }
 
-.highlight {
-  color: #c778dd;
+@media screen and (max-width: 764px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .tech-wrapper {
+    margin: 0 3rem;
+  }
+
+  .skill {
+    font-size: 1rem;
+  }
+
+  .skill img {
+    width: 36px;
+  }
 }

@@ -1,13 +1,18 @@
 .hero {
-  margin: 12rem 15rem 20rem 15rem;
+  display: flex;
+  flex-direction: column;
+  margin: 12rem 0 20rem 10%;
   scroll-margin-block-start: 610px;
-}
-
-.hero:first-child {
   font-size: 2rem;
   color: white;
 }
 
 .name {
   color: #c778dd;
+}
+
+@media screen and (max-width: 764px) {
+  .hero {
+    font-size: 1.5rem;
+  }
 }

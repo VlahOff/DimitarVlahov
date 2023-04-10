@@ -3,8 +3,10 @@
   top: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1.2rem 6rem;
   background-color: #282c33;
+  z-index: 50;
 }
 
 .title {
@@ -53,4 +55,70 @@
 .nav-link:hover::after,
 .nav-link:focus::after {
   transform: translate3d(0, 0, 0);
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media screen and (max-width: 1036px) {
+  .header {
+    padding: 1.2rem 3rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .menu-btn {
+    display: block;
+    color: #c778dd;
+  }
+
+  .navigation {
+    display: flex;
+    position: absolute;
+    top: 86px;
+    right: -300px;
+    z-index: 5;
+    width: 200px;
+    height: calc(100vh - 86px);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #282c33;
+    box-shadow: -21px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  }
+
+  .navigation.open {
+    animation: slide-in 300ms forwards;
+  }
+
+  .navigation.close {
+    animation: slide-out 300ms backwards;
+  }
+
+  @keyframes slide-in {
+    from {
+      right: -200px;
+      opacity: 0;
+    }
+
+    to {
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      right: 0;
+      opacity: 1;
+    }
+
+    to {
+      right: -200px;
+      opacity: 0;
+    }
+  }
 }
