@@ -4,7 +4,7 @@
   align-items: center;
   gap: 3rem;
   margin-bottom: 10rem;
-  scroll-margin-block-start: 300px;
+  scroll-margin-block-start: 100px;
 }
 
 .title {
@@ -36,12 +36,16 @@
 }
 
 @media screen and (max-width: 764px) {
+  .tech-stack {
+    scroll-margin-block-start: 100px;
+  }
+
   .title {
     font-size: 1.5rem;
   }
 
   .tech-wrapper {
-    margin: 0 3rem;
+    margin: 0 2rem;
   }
 
   .skill {
@@ -49,6 +53,6 @@
   }
 
   .skill img {
-    width: 36px;
+    width: 26px;
   }
 }

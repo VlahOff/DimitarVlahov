@@ -3,7 +3,7 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   color: white;
   margin-bottom: 3rem;
@@ -110,6 +110,7 @@
 @media screen and (max-width: 764px) {
   .contact-me-wrapper {
     margin: 0 3rem 6rem 3rem;
+    scroll-margin-block-start: 100px;
   }
   
   .title {
