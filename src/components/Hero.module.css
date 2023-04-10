@@ -23,7 +23,15 @@
   max-width: 800px;
 }
 
+.description p {
+  margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 764px) {
+  .hero-wrapper {
+    margin-bottom: 10rem;
+  }
+
   .hero {
     font-size: 1.5rem;
   }

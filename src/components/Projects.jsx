@@ -68,7 +68,6 @@ const Projects = () => {
         }
         {showDetails === 'thirdImage' &&
           <div className={classes['info-card']}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis maiores suscipit distinctio asperiores, exercitationem fugiat consequatur. Ab odio praesentium earum nisi itaque quis ullam, hic alias id, tenetur eveniet sunt.</p>
             <div className={classes['link-wrapper']}>
               <a href="https://github.com/VlahOff/PersonalPortfolio" target="_blank" className={classes.link}>View repository</a>
             </div>
@@ -76,7 +75,7 @@ const Projects = () => {
         }
         {showDetails === 'fourthImage' &&
           <div className={classes['info-card']}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis maiores suscipit distinctio asperiores, exercitationem fugiat consequatur. Ab odio praesentium earum nisi itaque quis ullam, hic alias id, tenetur eveniet sunt.</p>
+            <p>This is a small and simple website for searching information about movies it has a clean and easy-to-use interface, with a search bar prominently displayed on top. Users could enter the name of a movie they are interested in and the website would display relevant information such as the plot summary, cast and crew, release date, and ratings from various sources.</p>
             <div className={classes['link-wrapper']}>
               <a href="https://github.com/VlahOff/MovieDB" target="_blank" className={classes.link}>View repository</a>
               <a href="https://movie-db-omega-red.vercel.app/" target="_blank" className={classes.link}>Live</a>
