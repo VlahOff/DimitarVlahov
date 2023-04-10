@@ -10,6 +10,7 @@ import TechStack from './components/TechStack';
 import './App.css';
 
 function App() {
+  document.body.style.overflowX = 'hidden';
   const [isModalShown, setIsModalShown] = useState(false);
   const [message, setMessage] = useState('');
 
