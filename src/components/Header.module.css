@@ -69,7 +69,12 @@
   display: none;
 }
 
-@media screen and (max-width: 1036px) {
+.arrow-down {
+  color: white;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
   .header {
     padding: 1.2rem 3rem;
   }

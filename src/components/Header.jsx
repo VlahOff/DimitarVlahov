@@ -12,7 +12,10 @@ const Header = () => {
   return (
     <header className={classes.header}>
       <nav className={classes['nav-wrapper']}>
-        <h1 className={classes.title}><i className={`${classes.bolt} fa-solid fa-bolt`}></i> Dimitar</h1>
+        <h1 className={classes.title}>
+          <i className={`${classes.bolt} fa-solid fa-bolt`}></i>
+          Dimitar
+        </h1>
         <ul
           className={`${classes.navigation}
          ${isMenuOpen ? classes.open : classes.close}`}
@@ -22,6 +25,16 @@ const Header = () => {
           <li><a href="#techStack" className={classes['nav-link']}>Tech stack</a></li>
           <li><a href="#projects" className={classes['nav-link']}>Projects</a></li>
           <li><a href="#contactMe" className={classes['nav-link']}>Contact me!</a></li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1-h9hgn49C_Qzz2e-h7fwn0wJwi_0aC-n/view?usp=share_link"
+              target="_blank"
+              className={classes['nav-link']}
+            >
+              CV
+              <i className={`${classes['arrow-down']} fa-solid fa-file-arrow-down`}></i>
+            </a>
+          </li>
         </ul>
         <div className={classes['menu-btn']} onClick={toggleMenu}>
           <Hamburger toggled={isMenuOpen} />
