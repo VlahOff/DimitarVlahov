@@ -38,49 +38,6 @@
   margin-bottom: 2rem;
 }
 
-.info-card {
-  position: relative;
-  animation: show-description 300ms ease alternate;
-}
-
-.info-card p {
-  margin-bottom: 1rem;
-}
-
-.link-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1.5rem;
-  gap: 1rem;
-  text-align: center;
-}
-
-.link {
-  text-decoration: none;
-  color: white;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  background-color: #454d59;
-  border-radius: 0.5rem;
-}
-
-.link:hover {
-  background-color: #c778dd;
-}
-
-@keyframes show-description {
-  from {
-    opacity: 0;
-    top: 200px;
-  }
-
-  to {
-    opacity: 1;
-    top: 0;
-  }
-}
-
 @media screen and (max-width: 764px) {
   .title {
     font-size: 1.5rem;
@@ -105,13 +62,5 @@
 
   .info-wrapper {
     margin: 0 10%;
-  }
-  
-  .info-card p {
-    font-size: 1rem;
-  }
-
-  .link {
-    font-size: 1rem;
   }
 }

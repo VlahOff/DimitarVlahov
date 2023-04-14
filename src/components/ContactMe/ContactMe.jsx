@@ -73,7 +73,7 @@ const ContactMe = (props) => {
     emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, formRef.current, import.meta.env.VITE_PUBLIC_KEY)
       .then((result) => {
         if (result.status === 200) {
-          props.toggleModal('Message sent successfully!');
+          props.toggleModal('Thanks for the message.');
           setValues(initialFormValues);
         }
       })
@@ -135,7 +135,7 @@ const ContactMe = (props) => {
             onChange={onChangeHandler}
             onBlur={onMessageBlurHandler}
             value={values.message}
-          ></textarea>
+          />
           <label htmlFor="message" className={classes.label}>Message</label>
           {values.messageValid === false &&
             <p className={classes['error-message']}>Field must not be empty.</p>
