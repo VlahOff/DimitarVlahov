@@ -27,7 +27,7 @@ const Header = () => {
           <li><a href="#contactMe" className={classes['nav-link']}>Contact me!</a></li>
           <li>
             <a
-              href="https://drive.google.com/file/d/1-h9hgn49C_Qzz2e-h7fwn0wJwi_0aC-n/view?usp=share_link"
+              href="https://drive.google.com/file/d/1lK143siv1lv0xrmPKCMzgrw6aVW9DESM/view?usp=share_link"
               target="_blank"
               className={classes['nav-link']}
             >
