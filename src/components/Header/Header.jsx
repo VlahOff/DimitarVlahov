@@ -27,7 +27,7 @@ const Header = () => {
           <li><a href="#contactMe" className={classes['nav-link']}>Contact me!</a></li>
           <li>
             <a
-              href="https://drive.google.com/file/d/1lK143siv1lv0xrmPKCMzgrw6aVW9DESM/view?usp=share_link"
+              href={import.meta.env.VITE_CV_LINK}
               target="_blank"
               className={classes['nav-link']}
             >
