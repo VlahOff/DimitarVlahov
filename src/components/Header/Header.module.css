@@ -52,7 +52,7 @@
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
   opacity: 1;
-  transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-102%, 0, 0);
 }
 
 .nav-link:hover {
@@ -86,16 +86,17 @@
   .menu-btn {
     display: block;
     color: #c778dd;
+    z-index: 10;
   }
 
   .navigation {
     display: flex;
     position: absolute;
-    top: 62px;
+    top: -1.2rem;
     right: -300px;
     z-index: 5;
     width: 200px;
-    height: calc(100vh - 62px);
+    height: 100vh;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
