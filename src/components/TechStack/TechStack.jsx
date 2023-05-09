@@ -24,12 +24,16 @@ const TechStack = () => {
           <h4>CSS</h4>
         </article>
         <article className={classes.skill}>
-          <img src="https://skillicons.dev/icons?i=angular" alt="Angular" />
-          <h4>Angular</h4>
-        </article>
-        <article className={classes.skill}>
           <img src="https://skillicons.dev/icons?i=react" alt="ReactJS" />
           <h4>ReactJS</h4>
+        </article>
+        <article className={classes.skill}>
+          <img src="https://skillicons.dev/icons?i=redux" alt="Redux" />
+          <h4>Redux</h4>
+        </article>
+        <article className={classes.skill}>
+          <img src="https://skillicons.dev/icons?i=angular" alt="Angular" />
+          <h4>Angular</h4>
         </article>
         <article className={classes.skill}>
           <img src="https://skillicons.dev/icons?i=nodejs" alt="NodeJS" />
