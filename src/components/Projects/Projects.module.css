@@ -18,7 +18,7 @@
 
 .images img {
   transition: width 300ms;
-  width: 100px;
+  width: 200px;
   height: 400px;
   object-fit: cover;
   border-radius: 0.5rem;
@@ -38,11 +38,7 @@
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 764px) {
-  .title {
-    font-size: 1.5rem;
-  }
-
+@media screen and (max-width: 960px) {
   .images {
     display: flex;
     flex-direction: column;
@@ -52,7 +48,7 @@
 
   .images img {
     width: 80%;
-    height: 100px;
+    height: 150px;
   }
 
   .images img:hover {
@@ -62,5 +58,11 @@
 
   .info-wrapper {
     margin: 0 10%;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .title {
+    font-size: 1.5rem;
   }
 }

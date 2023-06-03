@@ -19,14 +19,14 @@ const Projects = () => {
       <h2 className={classes.title}>Projects</h2>
       <div className={classes.images}>
         <img
-          src={BulgarianDrivers}
-          alt="BulgarianDrivers home page"
+          src={Aniline}
+          alt="Aniline home page"
           id="firstImage"
           onMouseEnter={onHoverHandler}
         />
         <img
-          src={Aniline}
-          alt="Aniline home page"
+          src={BulgarianDrivers}
+          alt="BulgarianDrivers home page"
           id="secondImage"
           onMouseEnter={onHoverHandler}
         />
@@ -45,14 +45,14 @@ const Projects = () => {
       </div>
       <div className={classes['info-wrapper']}>
         {showDetails === 'firstImage' && <ProjectDetails
+          description="This web app is designed to track crypto prices, you can get a detailed look in the chart. You can track your portfolio`s P&L, and there is also a crypto converter."
+          repoLink="https://github.com/VlahOff/Aniline2"
+          liveLink="https://aniline.vercel.app/"
+        />}
+        {showDetails === 'secondImage' && <ProjectDetails
           description="This is a web app to write reviews for drivers based on their license plate number. The app provides a simple interface where users can enter the license plate number of the driver they want to review and then submit their review. Users can write a review, describing their experience with the driver, and provide a title for their review."
           repoLink="https://github.com/VlahOff/BulgarianDrivers"
           liveLink="https://bulgarian-drivers.vercel.app/"
-        />}
-        {showDetails === 'secondImage' && <ProjectDetails
-          description="This web app is designed to track crypto prices, you can get a detailed look in the chart. You can track your portfolio`s P&L, and there is also a crypto converter."
-          repoLink="https://github.com/VlahOff/Aniline"
-          liveLink="https://aniline.vercel.app/home"
         />}
         {showDetails === 'thirdImage' && <ProjectDetails
           repoLink="https://github.com/VlahOff/PersonalPortfolio"
