@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import classes from './Header.module.css';
+
 import Hamburger from 'hamburger-react';
+import NavLink from '../UI/navLink/NavLink';
+
+import classes from './Header.module.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(s => !s);
+    setIsMenuOpen((s) => !s);
   };
 
   return (
@@ -21,19 +24,25 @@ const Header = () => {
          ${isMenuOpen ? classes.open : classes.close}`}
           onClick={toggleMenu}
         >
-          <li><a href="#about" className={classes['nav-link']}>About</a></li>
-          <li><a href="#techStack" className={classes['nav-link']}>Tech stack</a></li>
-          <li><a href="#projects" className={classes['nav-link']}>Projects</a></li>
-          <li><a href="#contactMe" className={classes['nav-link']}>Contact me!</a></li>
           <li>
-            <a
-              href={import.meta.env.VITE_CV_LINK}
-              target="_blank"
-              className={classes['nav-link']}
-            >
+            <NavLink href="#about">About</NavLink>
+          </li>
+          <li>
+            <NavLink href="#techStack">Tech stack</NavLink>
+          </li>
+          <li>
+            <NavLink href="#projects">Projects</NavLink>
+          </li>
+          <li>
+            <NavLink href="#contactMe">Contact me!</NavLink>
+          </li>
+          <li>
+            <NavLink href={import.meta.env.VITE_CV_LINK} target="_blank">
               CV
-              <i className={`${classes['arrow-down']} fa-solid fa-file-arrow-down`}></i>
-            </a>
+              <i
+                className={`${classes['arrow-down']} fa-solid fa-file-arrow-down`}
+              ></i>
+            </NavLink>
           </li>
         </ul>
         <div className={classes['menu-btn']} onClick={toggleMenu}>

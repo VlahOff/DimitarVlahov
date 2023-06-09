@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #1c232e;
+  border: 2px solid #4D5156;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.left-part,
+.right-part {
+  flex: 1 1 50%;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px #c778ddc5;
+  border-color: var(--primary-color);
+}
+
+.card:hover .title {
+  font-size: 1.8rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.description,
+.tech-stack,
+.stack {
+  margin-bottom: 1rem;
+}
+
+.stack-title {
+  font-size: 1.2rem;
+}
+
+.stack {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tech {
+  background-color: #636363;
+  padding: 4px 8px;
+}
+
+.link-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    flex-wrap: wrap;
+  }
+}

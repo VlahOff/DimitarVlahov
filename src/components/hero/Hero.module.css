@@ -12,7 +12,7 @@
 }
 
 .name {
-  color: #c778dd;
+  color: var(--primary-color);
 }
 
 .description {
@@ -36,7 +36,7 @@
 }
 
 .social-link {
-  color: #c778dd;
+  color: var(--primary-color);
 }
 
 .social-link:hover {

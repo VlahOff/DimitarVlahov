@@ -1,0 +1,24 @@
+.projects-section {
+  scroll-margin-block-start: 80px;
+  margin: 0 auto 20rem auto;
+  width: 75%;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 764px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
