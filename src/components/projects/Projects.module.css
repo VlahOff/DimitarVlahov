@@ -18,6 +18,10 @@
 }
 
 @media screen and (max-width: 764px) {
+  .projects-section {
+    width: 95%;
+  }
+
   .title {
     font-size: 1.5rem;
   }

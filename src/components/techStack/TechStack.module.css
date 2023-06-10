@@ -36,15 +36,15 @@
 }
 
 @media screen and (max-width: 764px) {
-  .tech-stack {
-    scroll-margin-block-start: 100px;
-  }
-
   .title {
     font-size: 1.5rem;
   }
 
   .tech-wrapper {
     margin: 0 2rem;
+  }
+
+  .skill-wrapper {
+    margin: 0 5%;
   }
 }
