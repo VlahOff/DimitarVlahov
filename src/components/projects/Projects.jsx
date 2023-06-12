@@ -48,24 +48,14 @@ const Projects = () => {
           title="PersonalPortfolio"
           description="This is my portfolio website."
           image={PersonalPortfolio}
-          techStackFront={[
-            'JavaScript',
-            'ReactJS',
-            'HTML',
-            'CSS',
-          ]}
+          techStackFront={['JavaScript', 'ReactJS', 'HTML', 'CSS']}
           repoLink="https://github.com/VlahOff/PersonalPortfolio"
         />
         <ProjectCard
           title="MovieDB"
           description="This is a simple website for searching information about movies. Users could enter the name of a movie they are interested in and the website would display relevant information such as the plot summary, cast and crew, release date, and ratings from various sources."
           image={MovieDB}
-          techStackFront={[
-            'JavaScript',
-            'ReactJS',
-            'HTML',
-            'CSS',
-          ]}
+          techStackFront={['JavaScript', 'ReactJS', 'HTML', 'CSS']}
           repoLink="https://github.com/VlahOff/MovieDB"
           liveLink="https://movie-db-omega-red.vercel.app/"
         />
