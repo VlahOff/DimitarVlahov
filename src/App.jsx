@@ -8,29 +8,32 @@ import Projects from './components/projects/Projects';
 import TechStack from './components/techStack/TechStack';
 
 function App() {
-  document.body.style.overflowX = 'hidden';
-  const [isModalShown, setIsModalShown] = useState(false);
-  const [message, setMessage] = useState('');
+	document.body.style.overflowX = 'hidden';
+	const [isModalShown, setIsModalShown] = useState(false);
+	const [message, setMessage] = useState('');
 
-  const toggleModal = (message) => {
-    setMessage(message);
-    setIsModalShown((state) => !state);
-  };
+	const toggleModal = message => {
+		setMessage(message);
+		setIsModalShown(state => !state);
+	};
 
-  return (
-    <>
-      {isModalShown && (
-        <MessageModal toggleModal={toggleModal} message={message} />
-      )}
-      <Header />
-      <main>
-        <Hero />
-        <TechStack />
-        <Projects />
-        <ContactMe toggleModal={toggleModal} />
-      </main>
-    </>
-  );
+	return (
+		<>
+			{isModalShown && (
+				<MessageModal
+					toggleModal={toggleModal}
+					message={message}
+				/>
+			)}
+			<Header />
+			<main>
+				<Hero />
+				<TechStack />
+				<Projects />
+				<ContactMe toggleModal={toggleModal} />
+			</main>
+		</>
+	);
 }
 
 export default App;
