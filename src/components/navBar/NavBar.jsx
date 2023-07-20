@@ -58,17 +58,6 @@ const NavBar = () => {
 				<li>
 					<NavLink href="#contactMe">Contact me!</NavLink>
 				</li>
-				<li>
-					<NavLink
-						href={import.meta.env.VITE_CV_LINK}
-						target="_blank"
-					>
-						CV
-						<i
-							className={`${classes['file-icon']} fa-solid fa-file-arrow-down`}
-						></i>
-					</NavLink>
-				</li>
 			</ul>
 			<div className={classes['menu-btn']}>
 				<Hamburger
