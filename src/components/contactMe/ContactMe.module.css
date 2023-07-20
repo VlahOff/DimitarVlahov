@@ -2,11 +2,8 @@
   margin: 0 8rem 6rem 8rem;
 }
 
-.title {
+.title-header {
   font-size: 3rem;
-  text-align: center;
-  color: white;
-  margin-bottom: 3rem;
 }
 
 .title .highlight {
@@ -25,7 +22,7 @@
 .submit-btn {
   position: relative;
   z-index: 1;
-  color: #17C3B2;
+  color: #F4E93A;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
@@ -59,13 +56,36 @@
   color: #111;
 }
 
+.submit-btn:disabled {
+  cursor: not-allowed;
+  border: 2px solid #292929;
+}
+
+.submit-btn:disabled::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #2c2c2c;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.submit-btn:disabled:hover::before {
+  width: 105%;
+}
+
 @media screen and (max-width: 764px) {
   .contact-me-wrapper {
-    margin: 0 3rem 6rem 3rem;
+    margin: 0 2rem 6rem 2rem;
     scroll-margin-block-start: 100px;
   }
 
-  .title {
-    font-size: 1.5rem;
+  .title-header {
+    font-size: 2.4rem;
   }
 }

@@ -1,7 +1,7 @@
 import Aniline from '../../assets/Aniline.png';
 import BulgarianDrivers from '../../assets/BulgarianDrivers.png';
-import Portfolio from '../../assets/PersonalPortfolio.png';
 import MovieDb from '../../assets/MovieDB.png';
+import Portfolio from '../../assets/PersonalPortfolio.png';
 
 export const projects = [
 	{

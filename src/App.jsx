@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 import ContactMe from './components/contactMe/ContactMe';
-import NavBar from './components/navBar/NavBar';
 import Hero from './components/hero/Hero';
 import MessageModal from './components/messageModal/MessageModal';
+import NavBar from './components/navBar/NavBar';
 import Projects from './components/projects/Projects';
 import TechStack from './components/techStack/TechStack';
 

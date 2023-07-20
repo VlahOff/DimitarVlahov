@@ -1,12 +1,12 @@
-import { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import { useRef } from 'react';
 
 import { useForm } from '../../hooks/useForm';
+import GlowingTitle from '../UI/glowingTitle/GlowingTitle';
 import Input from '../UI/inputs/Input';
 import Textarea from '../UI/inputs/Textarea';
 
 import classes from './ContactMe.module.css';
-import GlowingTitle from '../UI/glowingTitle/GlowingTitle';
 
 const emailReg =
 	/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -24,17 +24,15 @@ const messageValidation = value => {
 };
 
 const ContactMe = props => {
-	const formRef = useRef();
-
-	const { formValues, isFormValid, changeHandler, blurHandler, resetValues } =
-		useForm({
-			name: '',
-			nameValid: null,
-			email: '',
-			emailValid: null,
-			message: '',
-			messageValid: null,
-		});
+	const formRef = useRef(null);
+	const { formValues, isFormValid, changeHandler, resetValues } = useForm({
+		name: '',
+		nameValid: null,
+		email: '',
+		emailValid: null,
+		message: '',
+		messageValid: null,
+	});
 
 	const onSubmitHandler = event => {
 		event.preventDefault();
@@ -64,7 +62,10 @@ const ContactMe = props => {
 			className={classes['contact-me-wrapper']}
 			id="contactMe"
 		>
-			<GlowingTitle title="Contact Me" />
+			<GlowingTitle
+				title="Contact Me"
+				titleClasses={classes['title-header']}
+			/>
 			<form
 				className={classes.form}
 				onSubmit={onSubmitHandler}

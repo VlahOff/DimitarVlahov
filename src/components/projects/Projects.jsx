@@ -1,5 +1,6 @@
 import GlowingTitle from '../UI/glowingTitle/GlowingTitle';
 import ProjectCard from './ProjectCard';
+
 import { projects } from './projects';
 
 import classes from './Projects.module.css';
@@ -10,7 +11,10 @@ const Projects = () => {
 			className={classes['projects-section']}
 			id="projects"
 		>
-			<GlowingTitle title="Projects" />
+			<GlowingTitle
+				title="Projects"
+				titleClasses={classes.title}
+			/>
 			<div className={classes.projects}>
 				{projects.map((p, i) => {
 					return (

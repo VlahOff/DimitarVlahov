@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+
 import classes from './MessageModal.module.css';
 
 const MessageModal = props => {

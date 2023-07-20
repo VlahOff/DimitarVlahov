@@ -70,9 +70,7 @@ const NavBar = () => {
 					</NavLink>
 				</li>
 			</ul>
-			<div
-				className={classes['menu-btn']}
-			>
+			<div className={classes['menu-btn']}>
 				<Hamburger
 					toggled={isMenuOpen}
 					toggle={setIsMenuOpen}

@@ -9,7 +9,10 @@ const TechStack = () => {
 			className={classes['tech-stack']}
 			id="techStack"
 		>
-			<GlowingTitle title="Skills and tools" titleClasses={classes.title} />
+			<GlowingTitle
+				title="Skills and tools"
+				titleClasses={classes.title}
+			/>
 			<div className={classes['skill-wrapper']}>
 				<Skills.JavaScript />
 				<Skills.TypeScript />
