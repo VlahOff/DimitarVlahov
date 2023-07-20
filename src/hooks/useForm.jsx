@@ -12,37 +12,45 @@ export const useForm = initialValues => {
 				.every(v => v === true);
 
 			setIsFormValid(isValidValues);
-		}, 100);
+		}, 500);
 
 		return () => clearTimeout(timer);
 	}, [values]);
 
-	const changeHandler = event => {
+	const changeHandler = (event, validator) => {
+		const id = event.target.id;
+		const value = event.target.value.trim();
+
+		if (validator) {
+			setValues(state => {
+				return {
+					...state,
+					[id]: value,
+					[id + 'Valid']: validator(value),
+				};
+			});
+		} else {
+			setValues(state => {
+				return {
+					...state,
+					[id]: value,
+				};
+			});
+		}
+	};
+
+	const radioChangeHandler = (event, id) => {
+		console.log(event.target.value);
 		setValues(state => {
 			return {
 				...state,
-				[event.target.id]: event.target.value,
+				[id]: event.target.value,
 			};
 		});
 	};
 
-	const blurHandler = (event, validator) => {
-		setValues(state => {
-			return {
-				...state,
-				[event.target.id + 'Valid']: validator(event.target.value),
-			};
-		});
-	};
-
-	const doPasswordMatch = event => {
-		setValues(state => {
-			return {
-				...state,
-				[event.target.id + 'Valid']:
-					values?.password === values[event.target.id],
-			};
-		});
+	const doPasswordMatch = value => {
+		return values?.password === value;
 	};
 
 	const resetValues = () => {
@@ -53,7 +61,7 @@ export const useForm = initialValues => {
 		formValues: values,
 		isFormValid,
 		changeHandler,
-		blurHandler,
+		radioChangeHandler,
 		doPasswordMatch,
 		resetValues,
 		setValues,

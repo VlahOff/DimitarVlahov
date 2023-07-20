@@ -2,12 +2,14 @@ import classes from './Skills.module.css';
 
 const SkillTemplate = ({ name, img }) => {
 	return (
-		<article className={classes.skill}>
-			<img
-				src={img}
-				alt={name}
-			/>
-			<h4>{name}</h4>
+		<article className={classes.container}>
+			<div className={classes.skill}>
+				<img
+					src={img}
+					alt={name}
+				/>
+				<h4>{name}</h4>
+			</div>
 		</article>
 	);
 };

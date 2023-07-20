@@ -10,7 +10,7 @@
   border: none;
   border-bottom: 2px solid #9b9b9b;
   outline: 0;
-  font-size: 17px;
+  font-size: 18px;
   color: white;
   padding: 7px 0;
   background: transparent;
@@ -23,7 +23,7 @@
 }
 
 .input:placeholder-shown~.label {
-  font-size: 17px;
+  font-size: 18px;
   cursor: text;
   top: 20px;
 }
@@ -33,7 +33,7 @@
   top: 0;
   display: block;
   transition: 0.2s;
-  font-size: 17px;
+  font-size: 18px;
   color: #9b9b9b;
   pointer-events: none;
 }
@@ -41,7 +41,7 @@
 .input:focus {
   padding-bottom: 6px;
   border-width: 3px;
-  border-image: linear-gradient(to right, #633470, #c778dd);
+  border-image: linear-gradient(to right, var(--primary-color), #61007c);
   border-image-slice: 1;
 }
 
@@ -50,7 +50,7 @@
   top: 0;
   display: block;
   transition: 0.2s;
-  font-size: 17px;
+  font-size: 18px;
   color: var(--primary-color);
   font-weight: 700;
 }

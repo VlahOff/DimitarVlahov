@@ -1,15 +1,22 @@
+.container {
+  transform: skewX(15deg);
+  background-color: #272727;
+}
+
 .skill {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 1rem;
   color: white;
   font-size: 1.3rem;
-  background-color: #454d59;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  transform: skewX(-15deg);
 }
 
-@media screen and (max-width: 764px){
+
+
+@media screen and (max-width: 764px) {
   .skill {
     font-size: 1rem;
   }

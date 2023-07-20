@@ -1,4 +1,5 @@
-import Skills from '../shared/skills/Skills';
+import GlowingTitle from '../UI/glowingTitle/GlowingTitle';
+import Skills from './Skills';
 
 import classes from './TechStack.module.css';
 
@@ -8,9 +9,7 @@ const TechStack = () => {
 			className={classes['tech-stack']}
 			id="techStack"
 		>
-			<h2 className={classes.title}>
-				<span className={classes.highlight}>Skills</span> and tools
-			</h2>
+			<GlowingTitle title="Skills and tools" titleClasses={classes.title} />
 			<div className={classes['skill-wrapper']}>
 				<Skills.JavaScript />
 				<Skills.TypeScript />

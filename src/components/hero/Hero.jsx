@@ -1,3 +1,4 @@
+import GlowingTitle from '../UI/glowingTitle/GlowingTitle';
 import classes from './Hero.module.css';
 
 const Hero = () => {
@@ -6,26 +7,28 @@ const Hero = () => {
 			className={classes['hero-wrapper']}
 			id="about"
 		>
-			<div className={classes.hero}>
-				<h2>Hello,</h2>
-				<h2>
-					I am <span className={classes.name}>Dimitar Vlahov</span>,
-				</h2>
-				<h2>Junior Full-Stack Developer</h2>
-			</div>
+			<GlowingTitle
+				title="Hello, I am Dimitar"
+				titleClasses={classes.title}
+				className={classes['title-wrapper']}
+			/>
 			<div className={classes.description}>
 				<p>
-					As a recent graduate with a passion for new technologies, I am a
-					hardworking and ambitious individual who thrives in a collaborative
-					team environment.
+					Front-End Developer with a solid foundation in HTML, CSS, JavaScript
+					and React.
 				</p>
 				<p>
-					My drive to learn and grow in my field fuels my dedication to staying
-					up-to-date with the latest industry advancements.
+					I am fueled by a profound passion for crafting visually captivating
+					and user-friendly web experiences.
 				</p>
 				<p>
-					With my strong work ethic and team player mentality, I am confident in
-					my ability to contribute to any project or organization.
+					I have developed various interactive web applications along my
+					learning journey, demonstrating my ability to translate design
+					concepts into responsive and functional interfaces.
+				</p>
+				<p>
+					I am enthusiastic about applying my dedication and a keen eye for
+					detail to create seamless user experiences.
 				</p>
 			</div>
 			<ul className={classes['socials-wrapper']}>

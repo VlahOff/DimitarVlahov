@@ -1,14 +1,15 @@
 .hero-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin: 12rem 10% 20rem 10%;
+  margin: 6rem auto 20rem auto;
+  padding: 0 3rem;
   scroll-margin-block-start: 200px;
 }
 
-.hero {
-  font-size: 2rem;
-  color: white;
+.title {
+  font-size: 5rem;
+}
+
+.title-wrapper {
+  margin-bottom: 5rem;
 }
 
 .name {
@@ -19,18 +20,16 @@
   color: white;
   font-size: 1.5rem;
   max-width: 800px;
+  margin: 0 auto;
 }
 
 .description p {
   margin-bottom: 1rem;
 }
 
-.description p:last-child {
-  margin-bottom: 0;
-}
-
 .socials-wrapper {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   font-size: 2rem;
 }
@@ -45,11 +44,12 @@
 
 @media screen and (max-width: 764px) {
   .hero-wrapper {
+    margin-top: 2rem;
     margin-bottom: 10rem;
   }
 
-  .hero {
-    font-size: 1.5rem;
+  .title {
+    font-size: 4rem;
   }
 
   .description {

@@ -23,19 +23,40 @@
 }
 
 .submit-btn {
-  color: white;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  background-color: #c778dd;
-  border-radius: 0.5rem;
-  margin-right: 1rem;
-  width: 200px;
+  position: relative;
+  z-index: 1;
+  color: #17C3B2;
+  font-weight: 700;
+  font-size: 18px;
   text-align: center;
+  text-transform: uppercase;
+  padding: 0.8em 1.8em;
+  border: 2px solid #17C3B2;
+  overflow: hidden;
+  background-color: transparent;
+  transition: .3s;
 }
 
-.submit-btn:disabled {
-  background-color: #454d59;
-  cursor: not-allowed;
+.submit-btn::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #F4E93A;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.submit-btn:hover::before {
+  width: 105%;
+}
+
+.submit-btn:hover {
+  color: #111;
 }
 
 @media screen and (max-width: 764px) {
@@ -43,7 +64,7 @@
     margin: 0 3rem 6rem 3rem;
     scroll-margin-block-start: 100px;
   }
-  
+
   .title {
     font-size: 1.5rem;
   }

@@ -6,9 +6,22 @@ import Input from '../UI/inputs/Input';
 import Textarea from '../UI/inputs/Textarea';
 
 import classes from './ContactMe.module.css';
+import GlowingTitle from '../UI/glowingTitle/GlowingTitle';
 
 const emailReg =
 	/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+const nameValidation = value => {
+	return value.trim().length >= 3;
+};
+
+const emailValidation = value => {
+	return emailReg.test(value.trim());
+};
+
+const messageValidation = value => {
+	return value.trim().length > 10;
+};
 
 const ContactMe = props => {
 	const formRef = useRef();
@@ -22,18 +35,6 @@ const ContactMe = props => {
 			message: '',
 			messageValid: null,
 		});
-
-	const onNameBlurHandler = event => {
-		blurHandler(event, v => v.trim().length > 0);
-	};
-
-	const onEmailBlurHandler = event => {
-		blurHandler(event, v => emailReg.test(v.trim()));
-	};
-
-	const onMessageBlurHandler = event => {
-		blurHandler(event, v => v.trim().length > 10);
-	};
 
 	const onSubmitHandler = event => {
 		event.preventDefault();
@@ -63,10 +64,7 @@ const ContactMe = props => {
 			className={classes['contact-me-wrapper']}
 			id="contactMe"
 		>
-			<h2 className={classes.title}>
-				Contact <span className={classes.highlight}>Me</span>
-			</h2>
-
+			<GlowingTitle title="Contact Me" />
 			<form
 				className={classes.form}
 				onSubmit={onSubmitHandler}
@@ -75,8 +73,7 @@ const ContactMe = props => {
 				<Input
 					id="name"
 					label="Name"
-					onChange={changeHandler}
-					onBlur={onNameBlurHandler}
+					onChange={e => changeHandler(e, nameValidation)}
 					value={formValues.name}
 					error={formValues.nameValid}
 					errorMessage="Please enter your name."
@@ -84,8 +81,7 @@ const ContactMe = props => {
 				<Input
 					id="email"
 					label="Email"
-					onChange={changeHandler}
-					onBlur={onEmailBlurHandler}
+					onChange={e => changeHandler(e, emailValidation)}
 					value={formValues.email}
 					error={formValues.emailValid}
 					errorMessage="Invalid email."
@@ -93,8 +89,7 @@ const ContactMe = props => {
 				<Textarea
 					id="message"
 					label="Message"
-					onChange={changeHandler}
-					onBlur={onMessageBlurHandler}
+					onChange={e => changeHandler(e, messageValidation)}
 					value={formValues.message}
 					error={formValues.messageValid}
 					errorMessage="Message must me at least 10 chars long."

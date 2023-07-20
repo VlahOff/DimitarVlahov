@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import ContactMe from './components/contactMe/ContactMe';
-import Header from './components/header/Header';
+import NavBar from './components/navBar/NavBar';
 import Hero from './components/hero/Hero';
 import MessageModal from './components/messageModal/MessageModal';
 import Projects from './components/projects/Projects';
@@ -25,7 +25,9 @@ function App() {
 					message={message}
 				/>
 			)}
-			<Header />
+			<header>
+				<NavBar />
+			</header>
 			<main>
 				<Hero />
 				<TechStack />

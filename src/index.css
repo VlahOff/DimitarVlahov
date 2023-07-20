@@ -1,5 +1,6 @@
 :root {
-  --primary-color: #c778dd;
+  --primary-color: #F4E93A;
+  --background-color: #000000;
 }
 
 *,
@@ -14,11 +15,11 @@
 }
 
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-ul ,
+ul,
 ol {
   list-style: none;
   padding: 0px;
@@ -30,10 +31,11 @@ html:focus-within {
 }
 
 body {
-  background-color: #282c33;
+  background-color: var(--background-color);
   font-family: 'Raleway', sans-serif;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 img,
