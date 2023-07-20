@@ -1,6 +1,6 @@
 import GlowingTitle from '../UI/glowingTitle/GlowingTitle';
 import ProjectCard from './ProjectCard';
-import data from './projects.json';
+import { projects } from './projects';
 
 import classes from './Projects.module.css';
 
@@ -12,7 +12,7 @@ const Projects = () => {
 		>
 			<GlowingTitle title="Projects" />
 			<div className={classes.projects}>
-				{data.projects.map((p, i) => {
+				{projects.map((p, i) => {
 					return (
 						<ProjectCard
 							key={i}
