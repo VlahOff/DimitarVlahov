@@ -71,6 +71,8 @@
 .link-wrapper {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
   width: 100%;
   z-index: 1;
 }

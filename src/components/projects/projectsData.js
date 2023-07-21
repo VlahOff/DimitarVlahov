@@ -2,8 +2,53 @@ import Aniline from '../../assets/Aniline.png';
 import BulgarianDrivers from '../../assets/BulgarianDrivers.png';
 import MovieDb from '../../assets/MovieDB.png';
 import Portfolio from '../../assets/Portfolio.png';
+import Positivus from '../../assets/Positivus.png';
+import CryptoArt from '../../assets/CryptoArt.png';
+import PortfolioTemplate from '../../assets/PortfolioTemplate.png';
 
 export const projects = [
+	{
+		title:'Positivus',
+		description: 'This is not functional just an implemented design.',
+		image: Positivus,
+		techStackFront:[
+			'JavaScript',
+			'ReactJS',
+			'HTML',
+			'CSS',
+		],
+		liveLink: 'https://positivus-psi.vercel.app/',
+		designLink: 'https://www.figma.com/community/file/1230604708032389430',
+		repoLink:'https://github.com/VlahOff/portfolio-projects/tree/main/positivus'
+	},
+	{
+		title:'CryptoArt',
+		description: 'This is not functional just an implemented design.',
+		image: CryptoArt,
+		techStackFront:[
+			'JavaScript',
+			'ReactJS',
+			'HTML',
+			'CSS',
+		],
+		liveLink: 'https://crypto-art-swart.vercel.app/',
+		designLink: 'https://www.figma.com/community/file/1257062858453316868',
+		repoLink:'https://github.com/VlahOff/portfolio-projects/tree/main/crypto-art'
+	},
+	{
+		title:'PortfolioTemplate',
+		description: 'This is not functional just an implemented design.',
+		image: PortfolioTemplate,
+		techStackFront:[
+			'JavaScript',
+			'ReactJS',
+			'HTML',
+			'CSS',
+		],
+		liveLink: 'https://portfolio-two-kappa-65.vercel.app/',
+		designLink: 'https://www.figma.com/community/file/1255560955410429196/KC-Studio-%E2%9C%A8-Portfolio-Template',
+		repoLink:'https://github.com/VlahOff/portfolio-projects/tree/main/portfolio'
+	},
 	{
 		title: 'Aniline',
 		description:

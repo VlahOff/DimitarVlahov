@@ -27,6 +27,7 @@ const Projects = () => {
 							techStackBack={p.techStackBack}
 							repoLink={p.repoLink}
 							liveLink={p.liveLink}
+							designLink={p.designLink}
 						/>
 					);
 				})}

@@ -7,6 +7,7 @@ const ProjectCard = ({
 	description,
 	techStackFront,
 	techStackBack,
+	designLink,
 	liveLink,
 	repoLink,
 	image,
@@ -51,6 +52,9 @@ const ProjectCard = ({
 					)}
 				</div>
 				<div className={classes['link-wrapper']}>
+					{designLink && (
+						<ExternalLink href={designLink}>Design Link</ExternalLink>
+					)}
 					{liveLink && <ExternalLink href={liveLink}>Live</ExternalLink>}
 					<ExternalLink href={repoLink}>Repo</ExternalLink>
 				</div>
