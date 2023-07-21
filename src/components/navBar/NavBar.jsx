@@ -19,14 +19,6 @@ const NavBar = () => {
 		};
 	}, []);
 
-	useEffect(() => {
-		if (isMenuOpen) {
-			document.body.style.overflowY = 'hidden';
-		} else {
-			document.body.style.overflowY = 'unset';
-		}
-	}, [isMenuOpen]);
-
 	const closeMenu = () => {
 		setIsMenuOpen(false);
 	};
