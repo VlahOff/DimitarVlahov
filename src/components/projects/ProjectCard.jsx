@@ -14,7 +14,9 @@ const ProjectCard = ({
 	return (
 		<article className={classes.card}>
 			<div className={classes['left-part']}>
-				<h2 className={classes.title}>{title}</h2>
+				<div className={classes['title-wrapper']}>
+					<h2 className={classes.title}>{title}</h2>
+				</div>
 				<p className={classes.description}>{description}</p>
 				<div className={classes['tech-stack']}>
 					{techStackFront && (

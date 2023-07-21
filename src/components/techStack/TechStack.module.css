@@ -7,7 +7,7 @@
 .tech-stack::before {
   content: '';
   display: block;
-  background-image: linear-gradient(45deg, #FF1524, #28182c, #665f01, #28182c, #FF1524);
+  background-image: linear-gradient(45deg, #FF1524 0%, #99900c 40%, #b9b02b 50%, #99900c 60%, #FF1524 100%);
   position: absolute;
   z-index: -1;
   inset: 0;

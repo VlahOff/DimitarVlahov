@@ -34,6 +34,10 @@
   font-size: 1.8rem;
 }
 
+.title-wrapper {
+  height: 44px;
+}
+
 .title {
   transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   word-break: break-word;

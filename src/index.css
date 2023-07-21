@@ -1,6 +1,7 @@
 :root {
   --primary-color: #F4E93A;
   --background-color: #000000;
+  --background-color-transparent: rgba(0, 0, 0, 0.6);
 }
 
 *,
