@@ -9,7 +9,7 @@ import PortfolioTemplate from '../../assets/PortfolioTemplate.png';
 export const projects = [
 	{
 		title:'Positivus',
-		description: 'This is not functional just an implemented design.',
+		description: 'This is not functional website, just an implemented design.',
 		image: Positivus,
 		techStackFront:[
 			'JavaScript',
@@ -23,7 +23,7 @@ export const projects = [
 	},
 	{
 		title:'CryptoArt',
-		description: 'This is not functional just an implemented design.',
+		description: 'This is not functional website, just an implemented design.',
 		image: CryptoArt,
 		techStackFront:[
 			'JavaScript',
@@ -37,7 +37,7 @@ export const projects = [
 	},
 	{
 		title:'PortfolioTemplate',
-		description: 'This is not functional just an implemented design.',
+		description: 'This is not functional website, just an implemented design.',
 		image: PortfolioTemplate,
 		techStackFront:[
 			'JavaScript',
