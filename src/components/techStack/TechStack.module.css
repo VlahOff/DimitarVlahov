@@ -32,6 +32,12 @@
 }
 
 @media screen and (max-width: 764px) {
+  .tech-stack {
+    margin-bottom: 10rem;
+    scroll-margin-block-start: 160px;
+  }
+
+
   .title {
     font-size: 2.4rem;
   }

@@ -1,7 +1,7 @@
 .hero-wrapper {
   margin: 6rem auto 20rem auto;
   padding: 0 3rem;
-  scroll-margin-block-start: 200px;
+  scroll-margin-block-start: 120px;
 }
 
 .title {

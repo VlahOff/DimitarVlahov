@@ -17,13 +17,26 @@
   padding: 2rem;
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
-  background-color: var(--background-color);
   border-radius: 0.5rem;
+  background-color: var(--background-color-transparent);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 .message {
   color: white;
   font-size: 2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 764px) {
+  .modal {
+    width: 80%;
+  }
+
+  .message {
+    font-size: 1.5rem;
+  }
 }
 
 @keyframes slide-down {

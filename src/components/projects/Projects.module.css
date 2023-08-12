@@ -19,6 +19,7 @@
 
 @media screen and (max-width: 764px) {
   .projects-section {
+    margin-bottom: 10rem;
     width: 95%;
   }
 

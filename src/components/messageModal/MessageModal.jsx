@@ -5,9 +5,9 @@ import classes from './MessageModal.module.css';
 const MessageModal = props => {
 	useEffect(() => {
 		document.body.style.overflow = 'hidden';
-		setTimeout(() => {
-			props.toggleModal();
-		}, 2000);
+		// setTimeout(() => {
+		// 	props.toggleModal();
+		// }, 2000);
 
 		return () => {
 			document.body.style.overflow = 'unset';
@@ -18,7 +18,8 @@ const MessageModal = props => {
 		<>
 			<div className={classes.backdrop}></div>
 			<div className={classes.modal}>
-				<p className={classes.message}>{props.message}</p>
+				{/* <p className={classes.message}>{props.message}</p> */}
+				<p className={classes.message}>Thanks for reaching out.</p>
 			</div>
 		</>
 	);
