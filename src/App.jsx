@@ -19,7 +19,7 @@ function App() {
 
 	return (
 		<>
-			{!isModalShown && (
+			{isModalShown && (
 				<MessageModal
 					toggleModal={toggleModal}
 					message={message}
