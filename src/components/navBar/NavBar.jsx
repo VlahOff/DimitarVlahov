@@ -19,6 +19,18 @@ const NavBar = () => {
 		};
 	}, []);
 
+	useEffect(() => {
+		if (isMenuOpen) {
+			document.querySelector('html').style.overflow = 'hidden';
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.querySelector('html').style.overflow = 'unset';
+			document.querySelector('html').style.overflowX = 'hidden';
+
+			document.body.style.overflow = 'unset';
+		}
+	});
+
 	const closeMenu = () => {
 		setIsMenuOpen(false);
 	};
@@ -29,10 +41,10 @@ const NavBar = () => {
 				isMenuOpen && classes['set-background']
 			}`}
 		>
-			<h1 className={classes.title}>
+			<a href="#about" className={classes.title}>
 				<i className={`${classes.bolt} fa-solid fa-bolt`}></i>
 				Dimitar
-			</h1>
+			</a>
 			<ul
 				className={`${classes.links}
          ${isMenuOpen ? classes.open : classes.close}`}

@@ -53,7 +53,7 @@ const ProjectCard = ({
 				</div>
 				<div className={classes['link-wrapper']}>
 					{designLink && (
-						<ExternalLink href={designLink}>Design Link</ExternalLink>
+						<ExternalLink href={designLink}>Design</ExternalLink>
 					)}
 					{liveLink && <ExternalLink href={liveLink}>Live</ExternalLink>}
 					<ExternalLink href={repoLink}>Repo</ExternalLink>
