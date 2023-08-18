@@ -28,6 +28,7 @@ const NavBar = () => {
 			document.querySelector('html').style.overflowX = 'hidden';
 
 			document.body.style.overflow = 'unset';
+			document.body.style.overflowX = 'hidden';
 		}
 	});
 
