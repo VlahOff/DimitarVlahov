@@ -1,4 +1,4 @@
-import GlowingTitle from '../UI/glowingTitle/GlowingTitle';
+import GlowingTitle from '../../UI/glowingTitle/GlowingTitle';
 import ProjectCard from './ProjectCard';
 
 import { projects } from './projectsData';

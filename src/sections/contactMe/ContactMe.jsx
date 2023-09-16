@@ -2,9 +2,9 @@ import emailjs from 'emailjs-com';
 import { useRef } from 'react';
 
 import { useForm } from '../../hooks/useForm';
-import GlowingTitle from '../UI/glowingTitle/GlowingTitle';
-import Input from '../UI/inputs/Input';
-import Textarea from '../UI/inputs/Textarea';
+import GlowingTitle from '../../UI/glowingTitle/GlowingTitle';
+import Input from '../../UI/inputs/Input';
+import Textarea from '../../UI/inputs/Textarea';
 
 import classes from './ContactMe.module.css';
 
@@ -51,7 +51,7 @@ const ContactMe = props => {
 						resetValues();
 					}
 				})
-				.catch(() => {
+				.catch((e) => {
 					props.toggleModal('An error has ocurred!');
 				});
 		}

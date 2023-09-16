@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import Hamburger from 'hamburger-react';
-import NavLink from '../UI/navLink/NavLink';
+import NavLink from '../../UI/navLink/NavLink';
 
 import classes from './NavBar.module.css';
 
@@ -42,7 +42,10 @@ const NavBar = () => {
 				isMenuOpen && classes['set-background']
 			}`}
 		>
-			<a href="#about" className={classes.title}>
+			<a
+				href="#about"
+				className={classes.title}
+			>
 				<i className={`${classes.bolt} fa-solid fa-bolt`}></i>
 				Dimitar
 			</a>

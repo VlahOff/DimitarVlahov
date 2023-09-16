@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-import ContactMe from './components/contactMe/ContactMe';
-import Hero from './components/hero/Hero';
+import ContactMe from './sections/contactMe/ContactMe';
+import Hero from './sections/hero/Hero';
 import MessageModal from './components/messageModal/MessageModal';
 import NavBar from './components/navBar/NavBar';
-import Projects from './components/projects/Projects';
-import TechStack from './components/techStack/TechStack';
+import Projects from './sections/projects/Projects';
+import TechStack from './sections/techStack/TechStack';
 
 function App() {
 	document.body.style.overflowX = 'hidden';

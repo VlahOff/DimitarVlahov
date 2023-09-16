@@ -1,4 +1,4 @@
-import classes from './Skills.module.css';
+import classes from './Skill.module.css';
 
 const SkillTemplate = ({ name, img }) => {
 	return (

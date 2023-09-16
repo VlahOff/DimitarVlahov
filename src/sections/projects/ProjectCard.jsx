@@ -1,4 +1,4 @@
-import ExternalLink from '../UI/externalLink/ExternalLink';
+import ExternalLink from '../../UI/externalLink/ExternalLink';
 
 import classes from './ProjectCard.module.css';
 

@@ -1,4 +1,4 @@
-import GlowingTitle from '../UI/glowingTitle/GlowingTitle';
+import GlowingTitle from '../../UI/glowingTitle/GlowingTitle';
 
 import classes from './Hero.module.css';
 
