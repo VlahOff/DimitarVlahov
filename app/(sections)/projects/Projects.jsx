@@ -1,6 +1,5 @@
 import GlowingTitle from '../../../components/glowingTitle/GlowingTitle';
 import ProjectCard from './ProjectCard';
-
 import { projects } from './projectsData';
 
 import classes from './Projects.module.css';

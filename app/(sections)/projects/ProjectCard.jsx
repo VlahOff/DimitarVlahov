@@ -19,7 +19,7 @@ const ProjectCard = ({
 				<header className={classes['title-wrapper']}>
 					<h2 className={classes.title}>{title}</h2>
 				</header>
-				<p className={classes.description}>{description}</p>
+				{description && <p className={classes.description}>{description}</p>}
 				<div className={classes['tech-stack']}>
 					{techStackFront && (
 						<>
@@ -64,7 +64,7 @@ const ProjectCard = ({
 					alt={title}
 					className={classes.img}
 					priority={true}
-					placeholder='blur'
+					placeholder="blur"
 				/>
 			</div>
 		</article>

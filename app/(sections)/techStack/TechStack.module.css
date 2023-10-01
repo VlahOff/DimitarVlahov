@@ -1,7 +1,9 @@
 .tech-stack {
+  position: relative;
+  top: 0;
+  left: 0;
   margin-bottom: 20rem;
   scroll-margin-block-start: 270px;
-  position: relative;
 }
 
 .tech-stack::before {

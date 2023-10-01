@@ -1,7 +1,7 @@
 import GlowingTitle from '@/components/glowingTitle/GlowingTitle';
+import Skills from '@/components/skill/Skill';
 
 import classes from './TechStack.module.css';
-import Skills from '@/components/skill/Skill';
 
 const TechStack = () => {
 	return (
@@ -18,7 +18,6 @@ const TechStack = () => {
 				<Skills.HTML />
 				<Skills.CSS />
 				<Skills.ReactJS />
-				<Skills.NextJS />
 				<Skills.Redux />
 				<Skills.NodeJS />
 				<Skills.Express />
