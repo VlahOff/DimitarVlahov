@@ -5,11 +5,11 @@ const TEMPLATE_ID = process.env.EMAIL_JS_TEMPLATE_ID;
 const PUBLIC_KEY = process.env.EMAIL_JS_PUBLIC_KEY;
 const PRIVATE_KEY = process.env.EMAIL_JS_PRIVATE_KEY;
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const ORIGIN = process.env.NEXT_PUBLIC_BASE_URL;
 
 export async function POST(req) {
 	try {
-		if (BASE_URL != req.headers.get('origin')) {
+		if (ORIGIN != req.headers.get('origin')) {
 			throw new Error('Invalid');
 		}
 
@@ -31,7 +31,7 @@ export async function POST(req) {
 			{
 				status: 200,
 				headers: {
-					'Access-Control-Allow-Origin': process.env.NEXT_PUBLIC_ORIGINS,
+					'Access-Control-Allow-Origin': ORIGIN,
 					'Access-Control-Allow-Methods': 'POST',
 					'Access-Control-Allow-Headers': 'Content-Type, application/json',
 				},
@@ -43,7 +43,7 @@ export async function POST(req) {
 			{
 				status: 403,
 				headers: {
-					'Access-Control-Allow-Origin': process.env.NEXT_PUBLIC_ORIGINS,
+					'Access-Control-Allow-Origin': ORIGIN,
 					'Access-Control-Allow-Methods': 'POST',
 					'Access-Control-Allow-Headers': 'Content-Type, application/json',
 				},
