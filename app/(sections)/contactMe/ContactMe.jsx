@@ -1,7 +1,6 @@
 'use client';
 
-import emailjs from 'emailjs-com';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 import MessageModal from '@/components/messageModal/MessageModal';
 import GlowingTitle from '../../../components/glowingTitle/GlowingTitle';
@@ -26,11 +25,12 @@ const messageValidation = value => {
 	return value.trim().length >= 10;
 };
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
 const ContactMe = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [modalMessage, setModalMessage] = useState('');
 
-	const formRef = useRef(null);
 	const { formValues, isFormValid, changeHandler, resetValues } = useForm({
 		name: '',
 		nameValid: null,
@@ -45,31 +45,25 @@ const ContactMe = () => {
 		setIsModalOpen(s => !s);
 	};
 
-	const onSubmitHandler = event => {
+	const onSubmitHandler = async event => {
 		event.preventDefault();
 
-		if (isFormValid) {
-			emailjs
-				.sendForm(
-					process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
-					process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,
-					formRef.current,
-					process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY
-				)
-				.then(result => {
-					if (result.status === 200) {
-						toggleModal('Thank you for reaching out.');
-						resetValues();
+		const res = await fetch(`${BASE_URL}/api/contact`, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(formValues),
+		});
 
-						setTimeout(() => {
-							toggleModal('');
-						}, 2000);
-					}
-				})
-				.catch(e => {
-					toggleModal('An error has ocurred please try later! ');
-				});
+		if (res.ok) {
+			toggleModal('Thank you for reaching out.');
+		} else {
+			toggleModal('An error has ocurred, please try again later!');
 		}
+
+		resetValues();
+		setTimeout(() => {
+			toggleModal('');
+		}, 2000);
 	};
 
 	return (
@@ -91,7 +85,6 @@ const ContactMe = () => {
 				<form
 					className={classes.form}
 					onSubmit={onSubmitHandler}
-					ref={formRef}
 				>
 					<Input
 						id="name"
