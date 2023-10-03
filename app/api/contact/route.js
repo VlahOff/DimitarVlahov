@@ -31,7 +31,7 @@ export async function POST(req) {
 			{
 				status: 200,
 				headers: {
-					'Access-Control-Allow-Origin': BASE_URL,
+					'Access-Control-Allow-Origin': process.env.NEXT_PUBLIC_ORIGINS,
 					'Access-Control-Allow-Methods': 'POST',
 					'Access-Control-Allow-Headers': 'Content-Type, application/json',
 				},
@@ -43,7 +43,7 @@ export async function POST(req) {
 			{
 				status: 403,
 				headers: {
-					'Access-Control-Allow-Origin': BASE_URL,
+					'Access-Control-Allow-Origin': process.env.NEXT_PUBLIC_ORIGINS,
 					'Access-Control-Allow-Methods': 'POST',
 					'Access-Control-Allow-Headers': 'Content-Type, application/json',
 				},
